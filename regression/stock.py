@@ -35,7 +35,7 @@ def get_data(show=False):
     return xs, ys
 
 
-def demo_stock():
+def demo_capm():
     xs, ys = get_data()
     xs = np.atleast_2d(xs).T
     model = sklearn.linear_model.LinearRegression()
@@ -49,9 +49,26 @@ def demo_stock():
     plt.plot(xs, ypred, '-r')
     plt.show()
 
+def demo_trend():
+    xs, ys = get_data()
+    ts = np.atleast_2d(range(len(xs))).T
+
+    model = sklearn.linear_model.LinearRegression()
+    model.fit(ts, xs)
+    print('w:', model.coef_, 'b:', model.intercept_)
+
+    ypred = model.predict(ts)
+    sig = np.sqrt(xs.var())
+    plt.figure()
+    plt.plot(ts, xs, '-b')
+    plt.plot(ts, ypred + 0.5 * sig, '-k')
+    plt.plot(ts, ypred, '-r')
+    plt.plot(ts, ypred - 0.5 * sig, '-k')
+    plt.show()
 
 def main():
-    demo_stock()
+    demo_capm()
+    demo_trend()
 
 
 if __name__=='__main__':

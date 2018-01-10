@@ -90,9 +90,11 @@ def regression_tensorflow():
         plt.scatter(ytest, pred_eval)
         plt.show()
 
+
 def main():
     #regression_sklearn()
     regression_tensorflow()
+
 
 if __name__=='__main__':
     main()

@@ -10,8 +10,6 @@ import sklearn.preprocessing
 import tensorflow as tf
 
 
-
-
 def get_data(show=False):
     info = sklearn.datasets.load_boston()
     xs = info['data']
@@ -163,6 +161,7 @@ def regression_l1_tensorflow():
         plt.figure()
         plt.scatter(ytest, pred_eval)
         plt.show()
+
 
 def main():
     regression_l2_sklearn()

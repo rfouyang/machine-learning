@@ -76,10 +76,12 @@ def regression_tensorflow():
         plt.plot(xt, pred_eval, '-r')
         plt.show()
 
+
 def main():
     #gen_data1d(show=True)
     #regression_sklearn()
     regression_tensorflow()
+
 
 if __name__=='__main__':
     main()

@@ -78,9 +78,9 @@ def regression_tensorflow():
 
 
 def main():
-    #gen_data1d(show=True)
-    #regression_sklearn()
-    regression_tensorflow()
+    gen_data1d(show=True)
+    regression_sklearn()
+    #regression_tensorflow()
 
 
 if __name__=='__main__':

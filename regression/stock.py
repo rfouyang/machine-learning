@@ -67,6 +67,7 @@ def demo_trend():
     plt.show()
 
 def main():
+    get_data(True)
     demo_capm()
     demo_trend()
 

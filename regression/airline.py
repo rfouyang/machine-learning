@@ -67,6 +67,7 @@ def demo_airline():
 
 
 def main():
+    get_data(True)
     demo_airline()
 
 

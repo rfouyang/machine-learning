@@ -16,6 +16,7 @@ def get_data(show=False):
     ys = info['target']
 
     if show==True:
+        print(info['DESCR'])
         df = pd.DataFrame(data=xs, columns=info['feature_names'])
         print(df.head())
         print(df.describe())
@@ -92,6 +93,7 @@ def regression_tensorflow():
 
 
 def main():
+    get_data(True)
     #regression_sklearn()
     regression_tensorflow()
 

@@ -69,7 +69,7 @@ def demo_trend():
 def main():
     get_data(True)
     demo_capm()
-    demo_trend()
+    #demo_trend()
 
 
 if __name__=='__main__':

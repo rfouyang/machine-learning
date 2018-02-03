@@ -93,7 +93,7 @@ def regression_tensorflow():
 
 
 def main():
-    get_data(True)
+    #get_data(True)
     #regression_sklearn()
     regression_tensorflow()
 

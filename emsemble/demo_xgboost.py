@@ -27,7 +27,6 @@ def get_data_boston():
     info = sklearn.datasets.load_boston()
     xs = info['data']
     ys = info['target']
-    print(info)
 
     xtrain, xtest, ytrain, ytest = sklearn.model_selection.train_test_split(xs, ys, test_size=0.2)
 
@@ -141,7 +140,7 @@ def regression_xgboost():
         'objective': 'reg:linear',
         'nthread': 4,
         'booster': 'gbtree',
-        'tree_method': 'exact',
+        'tree_method': 'hist',
         'silent': 1
     }
 
@@ -163,8 +162,8 @@ def regression_xgboost():
     for yt, yp in zip(ytest, ypred):
         print(yt, yp)
 
-    mes = sklearn.metrics.mean_squared_error(ytest, ypred)
-    print(mes)
+    mse = sklearn.metrics.mean_squared_error(ytest, ypred)
+    print(mse)
 
 def feature_importance_xgboost():
     params = dict()
@@ -209,7 +208,7 @@ def feature_importance_xgboost():
     model.save_model('model.bin')
     model.dump_model('desc.txt', fmap=fmap_fp)
 
-    xgb.plot_tree(model, fmap=fmap_fp, num_trees=1)
+    xgb.plot_tree(model, fmap=fmap_fp, num_trees=2)
     plt.show()
 
 

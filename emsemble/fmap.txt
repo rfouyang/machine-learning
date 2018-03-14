@@ -1,0 +1,13 @@
+0	CRIM	q
+1	ZN	q
+2	INDUS	q
+3	CHAS	q
+4	NOX	q
+5	RM	q
+6	AGE	q
+7	DIS	q
+8	RAD	q
+9	TAX	q
+10	PTRATIO	q
+11	B	q
+12	LSTAT	q

@@ -1,7 +1,3 @@
-__author__ = 'Ouyang Ruofei'
-__email__ = 'ruofei@wecash.asia'
-
-
 import numpy as np
 from hmmlearn import hmm
 
